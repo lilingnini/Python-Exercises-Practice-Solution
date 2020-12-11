@@ -1,0 +1,45 @@
+#普通單純的網頁，只需要用最簡單的 GET 請求即可直接下載
+
+# 引入 requests 模組
+import requests
+
+# 使用 GET 方式下載普通網頁並存在r裡
+r = requests.get('https://www.google.com.tw/')
+
+出處：https://blog.gtwang.org/programming/python-requests-module-tutorial/
+
+
+requests用來處理HTTP請求，lxml則是用來解析處理requests取得的數據，
+網路上的爬蟲文章多是使用BeautifulSoup進行解析，原本lxml的效能是比BeautifulSoup優的，
+除了lxml是使用C寫而BeautifulSoup以Python寫的，還有載入文檔的方式，
+不過現在BeautifulSoup也可以選擇使用lxml parser，應該選擇自己習慣的使用就可以囉
+
+出處：https://medium.com/%E9%B3%A5-crl/python%E9%9A%A8%E7%AD%86-requests-lxml%E5%9F%BA%E6%9C%AC%E7%88%AC%E8%9F%B2-%E4%BB%A5%E5%8D%9A%E5%AE%A2%E4%BE%86%E5%8D%B3%E6%99%82%E6%8E%92%E8%A1%8C%E6%A6%9C%E7%82%BA%E4%BE%8B-f9c67de0644e
+
+
+#Python使用open()打開檔案
+
+讀檔案:
+
+f = open('檔案', '模式') 
+f.read() #一次讀取檔案的全部內容
+f.close() #關閉檔案
+ 
+r - 讀取(檔案需存在)
+
+w - 新建檔案寫入(檔案可不存在，若存在則清空)
+
+a - 資料附加到舊檔案後面(游標指在EOF)
+
+r+ - 讀取舊資料並寫入(檔案需存在且游標指在開頭)
+
+w+ - 清空檔案內容，新寫入的東西可在讀出(檔案可不存在，會自行新增)
+
+a+ - 資料附加到舊檔案後面(游標指在EOF)，可讀取資料
+
+b - 二進位模式
+
+出處：https://ithelp.ithome.com.tw/articles/10161708
+
+
+
